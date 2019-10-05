@@ -1,3 +1,4 @@
 {
-  "main": "App.jsx"
+  "types": "App.tsx",
+  "main": "App.tsx"
 }

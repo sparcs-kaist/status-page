@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 
 module.exports = {
   mode:'development',
-  entry: path.join(__dirname, 'src', 'index.jsx'),
+  entry: path.join(__dirname, 'src', 'index.tsx'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.[hash].js'
@@ -19,7 +19,7 @@ module.exports = {
   module:{
     rules:[
       {
-        test:/\.(js|jsx)$/,
+        test:/\.(js|jsx|ts|tsx)$/,
         exclude:/node_modules/,
         use: {
           loader: 'babel-loader'
