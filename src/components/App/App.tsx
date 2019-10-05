@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './App.scss'
 
 const App = () => {
   return (
-    <div>Hello</div>
+    <div className={styles.wrapper}>Hello</div>
   )
 }
 

@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode:'development',
   entry: path.join(__dirname, '..', 'src', 'index.tsx'),
   resolve: {
     modules: [
@@ -23,9 +22,30 @@ module.exports = {
         }]
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
+        test: /\.scss$/,
+        exclude: '/node_modules/',
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[path][name]__[local]--[hash:base64:5]',
+              }
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: [
+                require('autoprefixer')(),
+              ]
+            }
+          },
+          'sass-loader',
+        ],
+      },
     ]
   },
   plugins: [

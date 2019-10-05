@@ -5,6 +5,7 @@ const base = require('./webpack.base.config')
 module.exports = (env) => merge(
   base,
   {
+    mode: 'production',
     output: {
       path: path.join(__dirname, '..', 'dist'),
       filename: 'bundle.[hash].js'
