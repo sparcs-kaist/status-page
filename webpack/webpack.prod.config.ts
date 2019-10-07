@@ -1,4 +1,6 @@
-const path = require('path');
+/* eslint-disable import/no-extraneous-dependencies */
+
+const path = require('path')
 const merge = require('webpack-merge')
 const base = require('./webpack.base.config')
 
@@ -8,7 +10,7 @@ module.exports = () => merge(
     mode: 'production',
     output: {
       path: path.join(__dirname, '..', 'dist'),
-      filename: 'bundle.[hash].js'
+      filename: 'bundle.[hash].js',
     },
   },
 )

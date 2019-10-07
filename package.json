@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "description": "SPARCS services' status page",
   "main": "index.js",
+  "config": {
+    "lint_target_path": "./",
+    "lint_target_ext": ".jsx,.js,.tsx,.ts"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
     "start": "webpack-dev-server --config webpack/webpack.dev.config.ts",
-    "build": "npm run clean && webpack --config webpack/webpack.prod.config.ts"
+    "build": "npm run clean && webpack --config webpack/webpack.prod.config.ts",
+    "lint:eslint": "eslint --ext $npm_package_config_lint_target_ext $npm_package_config_lint_target_path",
+    "lint": "yarn lint:eslint"
   },
   "repository": {
     "type": "git",
@@ -42,9 +48,17 @@
     "@types/react-dom": "^16.9.1",
     "@types/webpack": "^4.39.2",
     "@types/webpack-dev-server": "^3.1.7",
+    "@typescript-eslint/eslint-plugin": "^2.3.2",
+    "@typescript-eslint/parser": "^2.3.2",
     "autoprefixer": "^9.6.2",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "eslint": "6.1.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",

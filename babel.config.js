@@ -1,9 +1,9 @@
 module.exports = {
   presets: [
     '@babel/preset-env',
-    '@babel/preset-react'
+    '@babel/preset-react',
   ],
   plugins: [
-    '@babel/plugin-proposal-class-properties'
-  ]
+    '@babel/plugin-proposal-class-properties',
+  ],
 }
