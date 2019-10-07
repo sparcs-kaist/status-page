@@ -4,16 +4,19 @@
   "description": "SPARCS services' status page",
   "main": "index.js",
   "config": {
-    "lint_target_path": "./",
-    "lint_target_ext": ".jsx,.js,.tsx,.ts"
+    "prettier_target": "./*.{ts,js} ./**/*.{ts,tsx} !./dist/**",
+    "eslint_target": "./*.{ts,js} ./**/*.{ts,tsx}"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
     "start": "webpack-dev-server --config webpack/webpack.dev.config.ts",
     "build": "npm run clean && webpack --config webpack/webpack.prod.config.ts",
-    "lint:eslint": "eslint --ext $npm_package_config_lint_target_ext $npm_package_config_lint_target_path",
-    "lint": "yarn lint:eslint"
+    "prettier:check": "yarn prettier --debug-check $npm_package_config_prettier_target",
+    "prettier:write": "yarn prettier --write $npm_package_config_prettier_target",
+    "lint:eslint": "eslint --ext $npm_package_config_eslint_target",
+    "lint": "yarn lint:eslint && yarn prettier:check",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
@@ -55,13 +58,16 @@
     "css-loader": "^3.2.0",
     "eslint": "6.1.0",
     "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",
+    "prettier": "^1.18.2",
     "rimraf": "^3.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",

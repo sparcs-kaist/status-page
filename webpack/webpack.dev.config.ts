@@ -5,9 +5,8 @@ const base = require('./webpack.base.config')
 
 const port = process.env.PORT || 3000
 
-module.exports = () => merge(
-  base,
-  {
+module.exports = () =>
+  merge(base, {
     mode: 'development',
     devtool: 'eval-source-map',
     devServer: {
@@ -16,5 +15,4 @@ module.exports = () => merge(
       open: true,
       historyApiFallback: true,
     },
-  },
-)
+  })
