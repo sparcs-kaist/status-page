@@ -24,6 +24,10 @@ module.exports = {
         ],
       },
       {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
         test: /\.scss$/,
         exclude: '/node_modules/',
         use: [
@@ -45,6 +49,10 @@ module.exports = {
           },
           'sass-loader',
         ],
+      },
+      {
+        test: /\.svg$/,
+        use: ['file-loader'],
       },
     ],
   },
