@@ -1,0 +1,26 @@
+@import 'styles/colors.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.description {
+  font-size: 20px;
+  margin-top: 48px;
+  white-space: pre-wrap;
+}
+
+.description__small {
+  font-size: 10px;
+}
+
+.img {
+  margin-top: auto;
+  width: 405px;
+  height: 284px;
+}

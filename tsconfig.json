@@ -7,7 +7,8 @@
     "strict": true,
     "lib": ["esnext", "dom"],
     "baseUrl": "src",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   },
   "include": [
     "src/**/*"

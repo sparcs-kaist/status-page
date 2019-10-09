@@ -4,8 +4,8 @@ import styles from './Header.scss'
 
 function Header() {
   return (
-    <div className={styles.header}>
-      <img className={styles.header__logo} src={logoImg} alt="logo" />
+    <div className={styles.wrapper}>
+      <img className={styles.logo} src={logoImg} alt="logo" />
     </div>
   )
 }

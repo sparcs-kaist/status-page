@@ -1,0 +1,8 @@
+{
+  "translation": {
+    "MaintenanceNotiBox": {
+      "title": "Service Is Being <0>Maintained</0>",
+      "description": "We are conducting server checks to stabilize the system and improve performance.\nSPARCS server team is working<0>(roll roll)</0> to fix the problem.\n\nWe apologize for the inconvenience."
+    }
+  }
+}

@@ -43,15 +43,18 @@
     "not dead"
   ],
   "dependencies": {
+    "i18next": "^17.0.18",
     "normalize.css": "^8.0.1",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "react-i18next": "^10.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.6.0",
     "@types/node": "^12.7.11",
     "@types/react": "^16.9.5",
     "@types/react-dom": "^16.9.1",

@@ -1,0 +1,11 @@
+@import 'styles/colors';
+@import 'styles/variables';
+
+$body-padding-top: 116px;
+
+.wrapper {
+  min-height: calc(100vh - #{$header-height + $body-padding-top});
+  padding-top: $body-padding-top;
+  display: flex;
+  justify-content: center;
+}
