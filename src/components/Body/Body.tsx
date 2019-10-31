@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Body.scss'
 
 interface BodyProps {
-  children: React.ReactElement
+  children: React.ReactNode
 }
 
 function Body({ children }: BodyProps) {

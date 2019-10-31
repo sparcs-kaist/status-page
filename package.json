@@ -43,6 +43,7 @@
     "not dead"
   ],
   "dependencies": {
+    "classnames": "^2.2.6",
     "i18next": "^17.0.18",
     "normalize.css": "^8.0.1",
     "react": "^16.10.2",
@@ -55,6 +56,7 @@
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.6.0",
+    "@types/classnames": "^2.2.9",
     "@types/node": "^12.7.11",
     "@types/react": "^16.9.5",
     "@types/react-dom": "^16.9.1",

@@ -3,6 +3,15 @@
     "MaintenanceNotiBox": {
       "title": "현재 <0>서비스 점검중</0>입니다",
       "description": "시스템 안정화 및 성능 개선을 위해 서버 점검을 진행하고 있습니다.\n빠른 정상화를 위해 스팍스 서버 관리팀이 <0>(데굴데굴)</0>노력하고 있습니다.\n\n이용에 불편을 드려 죄송합니다."
+    },
+    "Services": {
+      "title": "현재 서비스 상태"
+    },
+    "serviceStatus": {
+      "operational": "Operational",
+      "maintenance": "Maintenance",
+      "stopped": "Stopped",
+      "development": "On Development"
     }
   }
 }

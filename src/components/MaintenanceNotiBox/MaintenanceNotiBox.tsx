@@ -1,6 +1,6 @@
 import React from 'react'
 import { Trans } from 'react-i18next'
-import logoImg from 'assets/images/sparcs.svg'
+import webDeveloperImg from 'assets/images/web_developer.svg'
 import styles from './MaintenanceNotiBox.scss'
 
 function MaintenanceNotiBox() {
@@ -16,7 +16,7 @@ function MaintenanceNotiBox() {
           <span className={styles.description__small} />
         </Trans>
       </div>
-      <img className={styles.img} src={logoImg} alt="logo" />
+      <img className={styles.img} src={webDeveloperImg} alt="logo" />
     </div>
   )
 }

@@ -1,0 +1,29 @@
+@import 'styles/colors.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 25px;
+  line-height: 44px;
+}
+
+.serviceContainer {
+  margin-top: 36px;
+  display: flex;
+  width: 446px;
+  flex-wrap: wrap;
+}
+
+.serviceBox {
+  &:nth-child(odd) {
+    margin-right: 16px;
+  }
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

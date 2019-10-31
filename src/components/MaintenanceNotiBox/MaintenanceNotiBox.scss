@@ -3,15 +3,18 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  width: 648px;
 }
 
 .title {
   font-size: 40px;
+  line-height: 44px;
 }
 
 .description {
   font-size: 20px;
   margin-top: 48px;
+  margin-bottom: 60px;
   white-space: pre-wrap;
 }
 
@@ -21,6 +24,7 @@
 
 .img {
   margin-top: auto;
+  margin-left: 40px;
   width: 405px;
-  height: 284px;
+  height: auto;
 }

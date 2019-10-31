@@ -22,5 +22,8 @@ module.exports = {
         packageDir: './',
       },
     ],
+    'import/prefer-default-export': 0,
+    'no-unused-vars': 0,
+    '@typescript-eslint/no-unused-vars': 2
   },
 }
