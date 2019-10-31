@@ -1,29 +1,75 @@
-@import 'styles/colors.scss';
+@import 'styles/colors';
+@import 'styles/mixins';
+
+$service_box_padding: 16px;
 
 .wrapper {
   display: flex;
   flex-direction: column;
+
+  @include md-only {
+    margin-top: 155px;
+    padding-top: 35px;
+    border-top: solid 1px $very-light-pink;
+  }
+
+  @include sm-only {
+    margin-top: 55px;
+    padding-top: 44px;
+    border-top: solid 1px $very-light-pink;
+  }
 }
 
 .title {
-  font-size: 25px;
-  line-height: 44px;
+  @include md-up {
+    font-size: 25px;
+    line-height: 44px;
+  }
+
+  @include sm-only {
+    font-size: 16px;
+  }
 }
 
 .serviceContainer {
-  margin-top: 36px;
   display: flex;
-  width: 446px;
   flex-wrap: wrap;
+
+  @include lg-only {
+    width: 446px;
+  }
+
+  @include md-up {
+    margin-top: 36px;
+  }
+
+  @include sm-only {
+    margin-top: 24px;
+  }
 }
 
 .serviceBox {
-  &:nth-child(odd) {
-    margin-right: 16px;
-  }
-  margin-bottom: 16px;
+  margin-bottom: $service_box_padding;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include lg-only {
+    width: 215px;
+    &:nth-child(odd) {
+      margin-right: $service_box_padding;
+    }
+  }
+
+  @include md-only {
+    width: calc(50% - #{$service_box_padding / 2});
+    &:nth-child(odd) {
+      margin-right: $service_box_padding;
+    }
+  }
+
+  @include sm-only {
+    width: 100%;
   }
 }
