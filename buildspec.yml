@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 11
+      nodejs: 10
     commands:
       - npm i npm@latest -g
       - npm install -g yarn
