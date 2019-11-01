@@ -1,0 +1,17 @@
+@import 'styles/colors';
+@import 'styles/variables';
+
+.wrapper {
+  width: 100%;
+  height: $header-height;
+  border-top: 5px solid $sparcs-orange;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 27px;
+  position: absolute;
+  bottom: 12px;
+  left: 24px;
+}

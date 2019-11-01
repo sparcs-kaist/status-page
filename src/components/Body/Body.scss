@@ -1,0 +1,24 @@
+@import 'styles/colors';
+@import 'styles/variables';
+@import 'styles/mixins';
+
+$body-padding-top: 60px;
+
+.wrapper {
+  min-height: calc(100vh - #{$header-height + $body-padding-top});
+  padding: $body-padding-top 70px 140px;
+  display: flex;
+
+  @include lg-only {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @include lg-down {
+    flex-direction: column;
+  }
+
+  @include sm-only {
+    padding: 90px 20px 110px;
+  }
+}

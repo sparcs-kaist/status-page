@@ -1,0 +1,94 @@
+@import 'styles/colors';
+@import 'styles/mixins';
+
+.wrapper {
+  display: flex;
+  border: 1px solid $very-light-pink;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  align-items: flex-start;
+
+  @include md-up {
+    height: 96px;
+    flex-direction: column;
+  }
+
+  @include sm-only {
+    height: 66px;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.img {
+  @include md-up {
+    height: 34px;
+  }
+
+  @include sm-only {
+    height: 28px;
+  }
+}
+
+.status {
+  display: flex;
+  align-items: center;
+
+  @include md-up {
+    font-size: 14px;
+    margin-top: 13px;
+  }
+
+  @include sm-only {
+    font-size: 12px;
+    margin-left: auto;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+
+    @include md-up {
+      margin-right: 16px;
+      height: 10px;
+      width: 10px;
+      border-radius: 5px;
+    }
+
+    @include sm-only {
+      margin-right: 14px;
+      height: 9px;
+      width: 9px;
+      border-radius: 5px;
+    }
+  }
+}
+
+.status-operational {
+  color: $medium-green;
+  &::before {
+    background-color: $medium-green;
+  }
+}
+
+.status-maintenance {
+  color: $macaroni-and-cheese;
+  &::before {
+    background-color: $macaroni-and-cheese;
+  }
+}
+
+.status-stopped {
+  color: $faded-red;
+  &::before {
+    background-color: $faded-red;
+  }
+}
+
+.status-development {
+  color: $brown-grey;
+  &::before {
+    background-color: $brown-grey;
+  }
+}
