@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
+import base from './webpack.base.config'
 
 const merge = require('webpack-merge')
-const base = require('./webpack.base.config')
 
 const port = process.env.PORT || 3000
 

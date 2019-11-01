@@ -4,7 +4,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const AutoprefixerPlugin = require('autoprefixer')
 
-module.exports = {
+export default {
   entry: path.join(__dirname, '..', 'src', 'index.tsx'),
   resolve: {
     extensions: ['.js', '.ts', '.tsx'],
