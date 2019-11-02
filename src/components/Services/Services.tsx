@@ -6,12 +6,15 @@ import otlImg from 'assets/images/services-otl.svg'
 import ssoImg from 'assets/images/projects-sso.svg'
 import geoulImg from 'assets/images/services-geoul.svg'
 import zaboImg from 'assets/images/services-zabo.svg'
-import newaraImg from 'assets/images/projects-new-ara.svg'
+import newAraImg from 'assets/images/projects-new-ara.svg'
 import konoImg from 'assets/images/services-kono.svg'
-import { ServiceStatus } from 'consts'
 import styles from './Services.scss'
 
-function Services() {
+interface ServicesProps {
+  status: any
+}
+
+function Services({ status }: ServicesProps) {
   const { t } = useTranslation()
   return (
     <div className={styles.wrapper}>
@@ -21,43 +24,43 @@ function Services() {
           className={styles.serviceBox}
           href="http://ara.sparcs.org"
           img={araImg}
-          status={ServiceStatus.operational}
+          status={status.ara}
         />
         <ServiceBox
           className={styles.serviceBox}
           href="https://otl.kaist.ac.kr"
           img={otlImg}
-          status={ServiceStatus.operational}
+          status={status.otl}
         />
         <ServiceBox
           className={styles.serviceBox}
           href="https://sparcssso.kaist.ac.kr"
           img={ssoImg}
-          status={ServiceStatus.operational}
+          status={status.sso}
         />
         <ServiceBox
           className={styles.serviceBox}
           href="http://ftp.sparcs.org"
           img={geoulImg}
-          status={ServiceStatus.operational}
+          status={status.geoul}
         />
         <ServiceBox
           className={styles.serviceBox}
           href="https://zabo.sparcs.org"
           img={zaboImg}
-          status={ServiceStatus.development}
+          status={status.zabo}
         />
         <ServiceBox
           className={styles.serviceBox}
           href="https://ara-beta.sparcs.org"
-          img={newaraImg}
-          status={ServiceStatus.development}
+          img={newAraImg}
+          status={status.newAra}
         />
         <ServiceBox
           className={styles.serviceBox}
           href="http://kono.sparcs.org/"
           img={konoImg}
-          status={ServiceStatus.development}
+          status={status.kono}
         />
       </div>
     </div>

@@ -32,9 +32,6 @@
 }
 
 .status {
-  display: flex;
-  align-items: center;
-
   @include md-up {
     font-size: 14px;
     margin-top: 13px;
@@ -44,6 +41,11 @@
     font-size: 12px;
     margin-left: auto;
   }
+}
+
+.statusText {
+  display: flex;
+  align-items: center;
 
   &::before {
     content: '';
@@ -65,28 +67,28 @@
   }
 }
 
-.status-operational {
+.statusText-operational {
   color: $medium-green;
   &::before {
     background-color: $medium-green;
   }
 }
 
-.status-maintenance {
+.statusText-maintenance {
   color: $macaroni-and-cheese;
   &::before {
     background-color: $macaroni-and-cheese;
   }
 }
 
-.status-stopped {
+.statusText-stopped {
   color: $faded-red;
   &::before {
     background-color: $faded-red;
   }
 }
 
-.status-development {
+.statusText-development {
   color: $brown-grey;
   &::before {
     background-color: $brown-grey;

@@ -1,0 +1,18 @@
+@import 'styles/colors';
+
+.wrapper {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: solid 2px $very-light-pink;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s infinite linear;
+  transform-origin: 50% 50%;
+
+  @keyframes spin {
+    0%    { transform: rotate(0); }
+    100%  { transform: rotate(360deg); }
+  }
+}
