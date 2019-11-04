@@ -5,6 +5,7 @@ interface ServerStatus {
   otl: boolean
   ara: boolean
   geoul: boolean
+  home: undefined
   kono: boolean
   zabo: boolean
   newAra: boolean

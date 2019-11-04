@@ -10,7 +10,8 @@ export const FixedStatus = {
   otl: undefined,
   ara: undefined,
   geoul: undefined,
+  home: undefined,
   kono: ServiceStatus.development,
-  zabo: undefined,
+  zabo: ServiceStatus.development,
   newAra: ServiceStatus.development,
 }

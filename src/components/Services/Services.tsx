@@ -4,6 +4,7 @@ import ServiceBox from 'components/ServiceBox'
 import araImg from 'assets/images/services-ara.svg'
 import otlImg from 'assets/images/services-otl.svg'
 import ssoImg from 'assets/images/projects-sso.svg'
+import homeImg from 'assets/images/projects-home.svg'
 import geoulImg from 'assets/images/services-geoul.svg'
 import zaboImg from 'assets/images/services-zabo.svg'
 import newAraImg from 'assets/images/projects-new-ara.svg'
@@ -43,6 +44,12 @@ function Services({ status }: ServicesProps) {
           href="http://ftp.sparcs.org"
           img={geoulImg}
           status={status.geoul}
+        />
+        <ServiceBox
+          className={styles.serviceBox}
+          href="https://sparcs.org"
+          img={homeImg}
+          status={status.home}
         />
         <ServiceBox
           className={styles.serviceBox}
