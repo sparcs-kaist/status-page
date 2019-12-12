@@ -17,6 +17,7 @@ function App() {
       // @ts-ignore
       setStatus(buildStatus(newStatus))
     } catch (err) {
+      // eslint-disable-next-line no-console
       console.error(err)
     }
   }

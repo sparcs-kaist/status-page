@@ -1,6 +1,6 @@
 {
   "name": "sparcs-status-page",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SPARCS services' status page",
   "main": "dist/index.html",
   "config": {

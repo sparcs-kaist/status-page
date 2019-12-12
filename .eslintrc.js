@@ -23,6 +23,7 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 0,
+    'import/extensions': [0, 'always', { 'tsx': 'never' }],
     'no-unused-vars': 0,
     '@typescript-eslint/no-unused-vars': 2
   },
