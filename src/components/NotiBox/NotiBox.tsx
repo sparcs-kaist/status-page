@@ -1,20 +1,20 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { Trans } from 'react-i18next'
 import webDeveloperImg from 'assets/images/web_developer.svg'
 import styles from './NotiBox.scss'
 
-function NotiBox() {
-  const i18nSubKey = useMemo(() => {
-    switch (window.location.hostname) {
-      case 'status.sparcs.org':
-        return 'serviceStatus'
-      case 'zabo.sparcs.org':
-        return 'development'
-      default:
-        return 'maintenance'
-    }
-  }, [])
+const i18nSubKey = (() => {
+  switch (window.location.hostname) {
+    case 'status.sparcs.org':
+      return 'serviceStatus'
+    case 'zabo.sparcs.org':
+      return 'development'
+    default:
+      return 'maintenance'
+  }
+})()
 
+function NotiBox() {
   return (
     <div className={styles.wrapper}>
       <div>
