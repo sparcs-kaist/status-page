@@ -1,8 +1,20 @@
 {
   "translation": {
-    "MaintenanceNotiBox": {
+    "NotiBox": {
       "title": "Service Is Being <0>Maintained</0>",
-      "description": "We are conducting server checks to stabilize the system and improve performance.\nSPARCS server team is working<0>(roll roll)</0> to fix the problem.\n\nWe apologize for the inconvenience."
+      "description": "We are conducting server checks to stabilize the system and improve performance.\nSPARCS server team is working<0>(roll roll)</0> to fix the problem.\n\nWe apologize for the inconvenience.",
+      "development": {
+        "title": "Service On <0>Development</0>",
+        "description": "We are now developing a new serivce.\nWe are working hard<0>(roll roll)</0>, hope you enjoy our new service.\n\nPlease return after our official launching."
+      },
+      "maintenance": {
+        "title": "Service On <0>Maintenance</0>",
+        "description": "We are conducting server checks to stabilize the system and improve performance.\nSPARCS server team is working hard<0>(roll roll)</0> to fix the problem.\n\nWe apologize for the inconvenience."
+      },
+      "serviceStatus": {
+        "title": "SPARCS <0>Status Page</0>",
+        "description": "You can monitor <1>SPARCS</1> services' real time status.\nAll events are noticed to our server team."
+      }
     },
     "Services": {
       "title": "Service Status"

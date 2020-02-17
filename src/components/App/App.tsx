@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from 'components/Header'
 import Body from 'components/Body'
-import MaintenanceNotiBox from 'components/MaintenanceNotiBox'
+import NotiBox from 'components/NotiBox'
 import Services from 'components/Services'
 import { buildStatus } from 'utils/status'
 import { FixedStatus } from 'consts'
@@ -30,7 +30,7 @@ function App() {
     <div className={styles.wrapper}>
       <Header />
       <Body>
-        <MaintenanceNotiBox />
+        <NotiBox />
         <Services status={status} />
       </Body>
     </div>

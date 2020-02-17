@@ -1,20 +1,32 @@
 import React from 'react'
 import { Trans } from 'react-i18next'
 import webDeveloperImg from 'assets/images/web_developer.svg'
-import styles from './MaintenanceNotiBox.scss'
+import styles from './NotiBox.scss'
 
-function MaintenanceNotiBox() {
+const i18nSubKey = (() => {
+  switch (window.location.hostname) {
+    case 'status.sparcs.org':
+      return 'serviceStatus'
+    case 'zabo.sparcs.org':
+      return 'development'
+    default:
+      return 'maintenance'
+  }
+})()
+
+function NotiBox() {
   return (
     <div className={styles.wrapper}>
       <div>
         <div className={styles.title}>
-          <Trans i18nKey="MaintenanceNotiBox.title">
+          <Trans i18nKey={`NotiBox.${i18nSubKey}.title`}>
             <b />
           </Trans>
         </div>
         <div className={styles.description}>
-          <Trans i18nKey="MaintenanceNotiBox.description">
+          <Trans i18nKey={`NotiBox.${i18nSubKey}.description`}>
             <span className={styles.description__small} />
+            <b />
           </Trans>
         </div>
       </div>
@@ -23,4 +35,4 @@ function MaintenanceNotiBox() {
   )
 }
 
-export default MaintenanceNotiBox
+export default NotiBox
