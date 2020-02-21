@@ -7,8 +7,6 @@ const i18nSubKey = (() => {
   switch (window.location.hostname) {
     case 'status.sparcs.org':
       return 'serviceStatus'
-    case 'zabo.sparcs.org':
-      return 'development'
     default:
       return 'maintenance'
   }
