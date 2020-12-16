@@ -13,5 +13,4 @@ export const FixedStatus = {
   home: undefined,
   zabo: undefined,
   kono: ServiceStatus.development,
-  newAra: ServiceStatus.development,
 }

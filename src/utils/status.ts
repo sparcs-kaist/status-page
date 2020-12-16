@@ -8,7 +8,6 @@ interface ServerStatus {
   home: undefined
   kono: boolean
   zabo: boolean
-  newAra: boolean
 }
 
 const getServiceStatus = (run: boolean) => (run ? ServiceStatus.operational : ServiceStatus.stopped)
