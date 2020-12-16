@@ -7,7 +7,6 @@ import ssoImg from 'assets/images/projects-sso.svg'
 import homeImg from 'assets/images/projects-home.svg'
 import geoulImg from 'assets/images/services-geoul.svg'
 import zaboImg from 'assets/images/services-zabo.svg'
-import newAraImg from 'assets/images/projects-new-ara.svg'
 import konoImg from 'assets/images/services-kono.svg'
 import styles from './Services.scss'
 
@@ -23,7 +22,7 @@ function Services({ status }: ServicesProps) {
       <div className={styles.serviceContainer}>
         <ServiceBox
           className={styles.serviceBox}
-          href="http://ara.sparcs.org"
+          href="https://newara.sparcs.org"
           img={araImg}
           status={status.ara}
         />
@@ -56,12 +55,6 @@ function Services({ status }: ServicesProps) {
           href="https://zabo.sparcs.org"
           img={zaboImg}
           status={status.zabo}
-        />
-        <ServiceBox
-          className={styles.serviceBox}
-          href="https://ara-beta.sparcs.org"
-          img={newAraImg}
-          status={status.newAra}
         />
         <ServiceBox
           className={styles.serviceBox}
