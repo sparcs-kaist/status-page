@@ -12,5 +12,6 @@ export const FixedStatus = {
   geoul: undefined,
   home: undefined,
   zabo: undefined,
+  taxi: undefined,
   kono: ServiceStatus.development,
 }

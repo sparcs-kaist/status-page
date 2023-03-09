@@ -7,6 +7,7 @@ interface ServerStatus {
   geoul: boolean
   home: undefined
   kono: boolean
+  taxi: boolean
   zabo: boolean
 }
 
