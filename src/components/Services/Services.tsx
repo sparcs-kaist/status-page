@@ -7,6 +7,7 @@ import ssoImg from 'assets/images/projects-sso.svg'
 import homeImg from 'assets/images/projects-home.svg'
 import geoulImg from 'assets/images/services-geoul.svg'
 import zaboImg from 'assets/images/services-zabo.svg'
+import taxiImg from 'assets/images/services-taxi.svg'
 import konoImg from 'assets/images/services-kono.svg'
 import styles from './Services.scss'
 
@@ -55,6 +56,12 @@ function Services({ status }: ServicesProps) {
           href="https://zabo.sparcs.org"
           img={zaboImg}
           status={status.zabo}
+        />
+        <ServiceBox
+          className={styles.serviceBox}
+          href="https://taxi.sparcs.org"
+          img={taxiImg}
+          status={status.taxi}
         />
         <ServiceBox
           className={styles.serviceBox}
