@@ -7,6 +7,7 @@ $body-padding-top: 60px;
 .wrapper {
   min-height: calc(100vh - #{$header-height + $body-padding-top});
   display: flex;
+  gap: 12px;
 
   @include lg-only {
     padding-top: $body-padding-top;

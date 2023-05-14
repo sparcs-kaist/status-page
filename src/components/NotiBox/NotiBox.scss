@@ -31,6 +31,7 @@
 
 .description {
   white-space: pre-wrap;
+  line-height: 1.2;
 
   @include lg-only {
     margin-bottom: 60px;
