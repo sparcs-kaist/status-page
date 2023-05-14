@@ -28,6 +28,7 @@ function NotiBox() {
           <Trans i18nKey={`NotiBox.${i18nSubKey}.description`}>
             <span className={styles.description__small} />
             <b />
+            <b className={styles.description__red} />
           </Trans>
         </div>
       </div>

@@ -12,7 +12,7 @@
         "description": "We are conducting server checks to stabilize the system and improve performance.\nSPARCS server team is working hard<0>(roll roll)</0> to fix the problem.\n\nWe apologize for the inconvenience.",
         "otl": {
           "title": "<0>OTL</0> Service On <0>Maintenance</0>",
-          "description": "Scheduled time: ~ 2023/05/15(Mon) 12:00\n\nOTL will not be available during the maintenance time. \nWe will do out best to complete it within the scheduled time.\n\nSorry for your inconvenience."
+          "description": "<2>Scheduled time: ~ 2023/05/15(Mon) 12:00</2>\n\nOTL will not be available during the maintenance time. \nWe will do out best to complete it within the scheduled time.\n\nSorry for your inconvenience."
         }
       },
       "serviceStatus": {

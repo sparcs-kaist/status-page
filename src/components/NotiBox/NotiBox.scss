@@ -31,7 +31,7 @@
 
 .description {
   white-space: pre-wrap;
-  line-height: 1.2;
+  line-height: 1.5;
 
   @include lg-only {
     margin-bottom: 60px;
@@ -60,6 +60,10 @@
   @include lg-down {
     font-size: 8px;
   }
+}
+
+.description__red {
+  background-color: #F2CECE;
 }
 
 .img {
