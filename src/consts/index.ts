@@ -21,7 +21,7 @@ export const ServiceAlias = {
   otl: '9',
   ara: '7',
   geoul: '18',
-  home: '8',
+  home: '17',
   zabo: '8',
   taxi: '12',
   kono: '27',
