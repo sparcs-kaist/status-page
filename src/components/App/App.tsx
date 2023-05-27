@@ -4,22 +4,20 @@ import Body from 'components/Body'
 import NotiBox from 'components/NotiBox'
 import Services from 'components/Services'
 import { buildStatus } from 'utils/status'
-import { FixedStatus } from 'consts'
+import { FixedStatus, ServiceAlias } from 'consts'
 import styles from './App.scss'
 
 function App() {
   const [status, setStatus] = useState(FixedStatus)
 
   const fetchStatus = async () => {
-    try {
-      const response = await window.fetch('https://status-api.sparcs.org')
-      const { body: newStatus } = await response.json()
-      // @ts-ignore
-      setStatus(buildStatus(newStatus))
-    } catch (err) {
-      // eslint-disable-next-line no-console
-      console.error(err)
-    }
+    
+    const response = await window.fetch('https://status.manage.sparcs.org/api/status-page/heartbeat/default')
+    const { heartbeatList: newStatus } = await response.json()
+
+    console.log(newStatus)
+    // @ts-ignore
+    setStatus(buildStatus(newStatus))
   }
 
   useEffect(() => {

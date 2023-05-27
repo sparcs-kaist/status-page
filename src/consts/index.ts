@@ -15,3 +15,14 @@ export const FixedStatus = {
   taxi: undefined,
   kono: ServiceStatus.development,
 }
+
+export const ServiceAlias = {
+  sso: '10',
+  otl: '9',
+  ara: '7',
+  geoul: '18',
+  home: '8',
+  zabo: '8',
+  taxi: '12',
+  kono: '27',
+}

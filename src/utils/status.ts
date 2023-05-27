@@ -1,29 +1,27 @@
-import { ServiceStatus, FixedStatus } from 'consts'
+import { ServiceStatus, FixedStatus, ServiceAlias } from 'consts'
 
-interface ServerStatus {
-  sso: boolean
-  otl: boolean
-  ara: boolean
-  geoul: boolean
-  home: undefined
-  kono: boolean
-  taxi: boolean
-  zabo: boolean
+const StatusCode = {
+  '0': ServiceStatus.stopped,
+  '1': ServiceStatus.operational,
+  '2': ServiceStatus.operational,
+  '3': ServiceStatus.maintenance
 }
 
-const getServiceStatus = (run: boolean) => (run ? ServiceStatus.operational : ServiceStatus.stopped)
+//const getServiceStatus = (run: boolean) => (run ? ServiceStatus.operational : ServiceStatus.stopped)
 
-export const buildStatus = (status: ServerStatus) => {
+export const buildStatus = (status: object) => {
+  console.log("BuildStatus Started")
   const nextStatus = {}
-  Object.entries(status).forEach(([service, run]) => {
-    // @ts-ignore
-    if (FixedStatus[service]) {
-      // @ts-ignore
-      nextStatus[service] = FixedStatus[service]
-    } else {
-      // @ts-ignore
-      nextStatus[service] = getServiceStatus(run)
+  // get Services keys
+  for (const key of Object.keys(ServiceAlias)) {
+    console.log("key: ", key)
+    //@ts-ignore
+    nextStatus[key] = StatusCode[status[ServiceAlias[key]][status[ServiceAlias[key]].length-1]['status']]
+    //@ts-ignore
+    if (FixedStatus[key]) {
+      //@ts-ignore
+      nextStatus[key] = FixedStatus[key]
     }
-  })
+  }
   return nextStatus
 }
