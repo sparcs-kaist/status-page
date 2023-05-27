@@ -14,14 +14,15 @@ export const buildStatus = (status: object) => {
   const nextStatus = {}
   // get Services keys
   for (const key of Object.keys(ServiceAlias)) {
-    console.log("key: ", key)
-    //@ts-ignore
-    nextStatus[key] = StatusCode[status[ServiceAlias[key]][status[ServiceAlias[key]].length-1]['status']]
     //@ts-ignore
     if (FixedStatus[key]) {
       //@ts-ignore
       nextStatus[key] = FixedStatus[key]
+      continue
     }
+    //@ts-ignore
+    nextStatus[key] = StatusCode[status[ServiceAlias[key]][status[ServiceAlias[key]].length-1]['status']]
+    
   }
   return nextStatus
 }
