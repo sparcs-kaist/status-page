@@ -16,7 +16,6 @@ function App() {
     const { heartbeatList: newStatus } = await response.json()
 
     console.log(newStatus)
-    // @ts-ignore
     setStatus(buildStatus(newStatus))
   }
 
