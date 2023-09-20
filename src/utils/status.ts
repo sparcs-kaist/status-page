@@ -25,7 +25,13 @@ export const buildStatus = (status: object) => {
       // @ts-ignore
       if (!nextStatus[StatusID] || nextStatus[StatusID] === ServiceStatus.operational) {
         // @ts-ignore
-        nextStatus[StatusID] = StatusCode[status[StatusID][status[StatusID].length-1]['status']]
+        if (!status[StatusID]) {
+          // @ts-ignore
+          nextStatus[StatusID] = ServiceStatus.stopped
+        } else {
+          // @ts-ignore
+          nextStatus[StatusID] = StatusCode[status[StatusID][status[StatusID].length-1]['status']]
+        }
         continue
       }
     }
