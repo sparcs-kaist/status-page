@@ -20,6 +20,7 @@ export const buildStatus = (status: object) => {
       nextStatus[ServiceName] = FixedStatus[ServiceName]
       continue
     }
+    // @ts-ignore
     for (const StatusID of ServiceAlias[ServiceName]) {
       // @ts-ignore
       if (!nextStatus[StatusID] || nextStatus[StatusID] === ServiceStatus.operational) {
