@@ -19,7 +19,7 @@ export const FixedStatus = {
 export const ServiceAlias = {
   sso: ['10'],
   otl: ['9', '28'],
-  ara: ['7'],
+  ara: ['7', '35'],
   geoul: ['18'],
   home: ['17'],
   zabo: ['8', '34'],
