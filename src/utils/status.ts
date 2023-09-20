@@ -30,7 +30,7 @@ export const buildStatus = (status: object) => {
           nextStatus[StatusID] = ServiceStatus.stopped
         } else {
           // @ts-ignore
-          nextStatus[StatusID] = StatusCode[status[StatusID][status[StatusID].length-1]['status']]
+          nextStatus[ServiceName] = StatusCode[status[StatusID][status[StatusID].length-1]['status']]
         }
         continue
       }
