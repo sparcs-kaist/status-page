@@ -17,12 +17,12 @@ export const FixedStatus = {
 }
 
 export const ServiceAlias = {
-  sso: '10',
-  otl: '9',
-  ara: '7',
-  geoul: '18',
-  home: '17',
-  zabo: '8',
-  taxi: '12',
-  kono: '27',
+  sso: ['10'],
+  otl: ['9', '28'],
+  ara: ['7', '35'],
+  geoul: ['18'],
+  home: ['17'],
+  zabo: ['8', '34'],
+  taxi: ['12', '29'],
+  kono: ['27'],
 }

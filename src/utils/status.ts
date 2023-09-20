@@ -13,16 +13,28 @@ export const buildStatus = (status: object) => {
   console.log("BuildStatus Started")
   const nextStatus = {}
   // get Services keys
-  for (const key of Object.keys(ServiceAlias)) {
-    //@ts-ignore
-    if (FixedStatus[key]) {
-      //@ts-ignore
-      nextStatus[key] = FixedStatus[key]
+  for (const ServiceName of Object.keys(ServiceAlias)) {
+    // @ts-ignore
+    if (FixedStatus[ServiceName]) {
+      // @ts-ignore
+      nextStatus[ServiceName] = FixedStatus[ServiceName]
       continue
     }
-    //@ts-ignore
-    nextStatus[key] = StatusCode[status[ServiceAlias[key]][status[ServiceAlias[key]].length-1]['status']]
-    
+    // @ts-ignore
+    for (const StatusID of ServiceAlias[ServiceName]) {
+      // @ts-ignore
+      if (!nextStatus[StatusID] || nextStatus[StatusID] === ServiceStatus.operational) {
+        // @ts-ignore
+        if (!status[StatusID]) {
+          // @ts-ignore
+          nextStatus[StatusID] = ServiceStatus.stopped
+        } else {
+          // @ts-ignore
+          nextStatus[ServiceName] = StatusCode[status[StatusID][status[StatusID].length-1]['status']]
+        }
+        continue
+      }
+    }
   }
   return nextStatus
 }
