@@ -5,7 +5,15 @@ export enum ServiceStatus {
   development = 'development',
 }
 
-export const FixedStatus = {
+export interface StatusInterface {
+  [key: string]: ServiceStatus | undefined
+}
+
+interface Services {
+  [key: string]: Array<string>
+}
+
+export const FixedStatus: StatusInterface = {
   sso: undefined,
   otl: undefined,
   ara: undefined,
@@ -16,7 +24,7 @@ export const FixedStatus = {
   kono: ServiceStatus.development,
 }
 
-export const ServiceAlias = {
+export const ServiceAlias: Services = {
   sso: ['10'],
   otl: ['9', '28'],
   ara: ['7', '35'],
